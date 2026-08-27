@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FAQ — IPE</title>
+<link rel="icon" href="favicon.ico">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="/"><img src="images/ipe-logo.svg" alt="">IPE</a>
+    <nav class="site">
+      <a href="/">Overview</a>
+      <a href="https://docs.kernel.org/admin-guide/LSM/ipe.html">Docs</a>
+      <a href="/use-cases.html">Use Cases</a>
+      <a href="/faq.html" class="active">FAQ</a>
+      <a href="/genesis.html">Genesis</a>
+      <a href="/roadmap.html">Roadmap</a>
+      <a href="/talks.html">Talks</a>
+      <a href="/contributing.html">Contributing</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="wrap">
+
+<div class="pagehead">
+  <h1>FAQ</h1>
+</div>
+
+<section>
+  <h2>How does IPE relate to SELinux and AppArmor?</h2>
+  <p>
+    SELinux and AppArmor confine what a running process may access. IPE decides
+    whether a file-backed executable operation is allowed based on the integrity
+    properties of the file. They compose as stacked LSMs.
+  </p>
+</section>
+
+<section>
+  <h2>Can I run IPE in a container?</h2>
+  <p>
+    IPE is currently system-wide. Namespace support is
+    <a href="/roadmap.html">on the roadmap</a>.
+  </p>
+</section>
+
+<section>
+  <h2>Which kernel do I need?</h2>
+  <p>6.12 or newer.</p>
+</section>
+
+<section>
+  <h2>Where is the full technical documentation?</h2>
+  <p>
+    <a href="https://docs.kernel.org/admin-guide/LSM/ipe.html">Admin Guide</a> —
+    policy syntax, securityfs interface, audit records, threat model, known limitations.
+  </p>
+  <p>
+    <a href="https://docs.kernel.org/security/ipe.html">Design Documentation</a> —
+    architecture and implementation.
+  </p>
+</section>
+
+<section>
+  <h2>Why is the mascot a seal?</h2>
+  <p>
+    A seal is what you press onto a document to attest its origin and make
+    tampering evident.
+  </p>
+</section>
+
+</div>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <span>
+      IPE is part of the Linux kernel, licensed under
+      <a href="https://www.kernel.org/doc/html/latest/process/license-rules.html">GPL-2.0</a>.
+      Site content <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.
+    </span>
+    <span>
+      <a href="https://github.com/Integrity-Policy-Enforcement">GitHub</a>
+    </span>
+  </div>
+</footer>
+
+</body>
+</html>

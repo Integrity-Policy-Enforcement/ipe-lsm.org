@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Use Cases — IPE</title>
+<link rel="icon" href="favicon.ico">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="/"><img src="images/ipe-logo.svg" alt="">IPE</a>
+    <nav class="site">
+      <a href="/">Overview</a>
+      <a href="https://docs.kernel.org/admin-guide/LSM/ipe.html">Docs</a>
+      <a href="/use-cases.html" class="active">Use Cases</a>
+      <a href="/faq.html">FAQ</a>
+      <a href="/genesis.html">Genesis</a>
+      <a href="/roadmap.html">Roadmap</a>
+      <a href="/talks.html">Talks</a>
+      <a href="/contributing.html">Contributing</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="wrap">
+
+<div class="pagehead">
+  <h1>Use Cases</h1>
+</div>
+
+<section>
+  <h2>Cloud infrastructure</h2>
+  <p>Microsoft ships IPE in production on Azure:</p>
+  <ul>
+    <li><a href="https://learn.microsoft.com/en-us/azure/aks/use-azure-linux-os-guard">Azure Linux with OS Guard</a> — code integrity enforcement on AKS node images</li>
+    <li><a href="https://learn.microsoft.com/en-us/azure/azure-boost/overview">Azure Boost</a> — locked-down host stack for offloaded hypervisor workloads</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Confidential computing</h2>
+  <p>
+    In a confidential VM the hardware attests the initial state at launch.
+    IPE can constrain what executes after boot, complementing hardware
+    attestation with runtime enforcement.
+  </p>
+</section>
+
+<section>
+  <h2>Edge and embedded devices</h2>
+  <p>
+    Fixed-function devices that ship as whole dm-verity images. IPE ensures
+    only code from signed images can execute.
+  </p>
+</section>
+
+<section>
+  <h2>Where IPE fits</h2>
+  <p>
+    IPE works well when the set of code that should run is known ahead of
+    time, ships as signed artifacts, and the system already uses dm-verity
+    or fs-verity. See the
+    <a href="https://docs.kernel.org/admin-guide/LSM/ipe.html#use-cases">kernel documentation</a>
+    for more detail.
+  </p>
+</section>
+
+</div>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <span>
+      IPE is part of the Linux kernel, licensed under
+      <a href="https://www.kernel.org/doc/html/latest/process/license-rules.html">GPL-2.0</a>.
+      Site content <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.
+    </span>
+    <span>
+      <a href="https://github.com/Integrity-Policy-Enforcement">GitHub</a>
+    </span>
+  </div>
+</footer>
+
+</body>
+</html>

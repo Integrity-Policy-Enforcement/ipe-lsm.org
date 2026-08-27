@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Genesis — IPE</title>
+<link rel="icon" href="favicon.ico">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="/"><img src="images/ipe-logo.svg" alt="">IPE</a>
+    <nav class="site">
+      <a href="/">Overview</a>
+      <a href="https://docs.kernel.org/admin-guide/LSM/ipe.html">Docs</a>
+      <a href="/use-cases.html">Use Cases</a>
+      <a href="/faq.html">FAQ</a>
+      <a href="/genesis.html" class="active">Genesis</a>
+      <a href="/roadmap.html">Roadmap</a>
+      <a href="/talks.html">Talks</a>
+      <a href="/contributing.html">Contributing</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="wrap">
+
+<div class="pagehead">
+  <h1>Genesis</h1>
+</div>
+
+<section>
+  <p>
+    IPE started as a Microsoft project to enforce code integrity on
+    locked-down Azure infrastructure. Deven Bowers wrote the initial
+    implementation and drove the early upstreaming effort on the LSM
+    mailing list across multiple revision cycles.
+  </p>
+  <p>
+    Fan Wu took over, added fs-verity support, reworked the codebase to
+    address upstream feedback, and carried it through to acceptance.
+    IPE was merged into mainline in Linux 6.12.
+  </p>
+  <p>
+    The design motivation and technical rationale are documented in the
+    kernel tree:
+    <a href="https://docs.kernel.org/security/ipe.html">Design Documentation</a>.
+  </p>
+</section>
+
+</div>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <span>
+      IPE is part of the Linux kernel, licensed under
+      <a href="https://www.kernel.org/doc/html/latest/process/license-rules.html">GPL-2.0</a>.
+      Site content <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.
+    </span>
+    <span>
+      <a href="https://github.com/Integrity-Policy-Enforcement">GitHub</a>
+    </span>
+  </div>
+</footer>
+
+</body>
+</html>

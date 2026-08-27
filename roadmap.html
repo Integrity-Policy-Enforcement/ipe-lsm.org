@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Roadmap — IPE</title>
+<meta name="description" content="Planned work for IPE: composefs, namespaces, and certificate policy.">
+<link rel="icon" href="favicon.ico">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="/"><img src="images/ipe-logo.svg" alt="">IPE</a>
+    <nav class="site">
+      <a href="/">Overview</a>
+      <a href="https://docs.kernel.org/admin-guide/LSM/ipe.html">Docs</a>
+      
+      <a href="/use-cases.html">Use Cases</a>
+      <a href="/faq.html">FAQ</a>
+      <a href="/genesis.html">Genesis</a>
+      <a href="/roadmap.html" class="active">Roadmap</a>
+      <a href="/talks.html">Talks</a>
+      <a href="/contributing.html">Contributing</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="wrap">
+
+<div class="pagehead">
+  <h1>Roadmap</h1>
+  <p class="lede">Directions under consideration. Nothing here is a commitment or schedule.</p>
+</div>
+
+<section>
+  <h2>Shipped</h2>
+  <table>
+    <tr><th>Version</th><th>Feature</th></tr>
+    <tr><td>6.12</td><td>Core policy engine, securityfs interface, audit records</td></tr>
+    <tr><td>6.12</td><td><code>boot_verified</code>, <code>dmverity_roothash</code>, <code>dmverity_signature</code>, <code>fsverity_digest</code>, <code>fsverity_signature</code></td></tr>
+    <tr><td>6.17</td><td><code>AT_EXECVE_CHECK</code> — interpreted script enforcement</td></tr>
+  </table>
+</section>
+
+<section>
+  <h2>composefs / ostree support <span class="status planned">planned</span></h2>
+  <p>
+    Automatic support for ostree-based deployments using composefs, enabling
+    IPE to work with image-based Linux distributions that use fs-verity
+    for content verification.
+  </p>
+</section>
+
+<section>
+  <h2>Namespace support <span class="status planned">planned</span></h2>
+  <p>
+    IPE is currently system-wide: one active policy governs every process on the
+    host. For mixed-workload hosts, it would be useful to scope policies to a
+    namespace, with the constraint that a nested policy can only be more
+    restrictive than the one containing it.
+  </p>
+  <p>
+    This depends on broader LSM and audit namespacing work that is still under
+    discussion upstream. See the
+    <a href="/talks.html">namespace talk</a> for early design work.
+  </p>
+</section>
+
+<section>
+  <h2>Certificate policy <span class="status planned">planned</span></h2>
+  <p>
+    IPE currently treats a signature as valid if it chains to a trusted key.
+    Certificate policy would let rules match on properties of the signing
+    certificate — subject, issuer, or key identifier — so that different keys
+    can be authorised for different operations. For example, a key trusted for
+    OS images would not automatically be trusted for kernel modules.
+  </p>
+</section>
+
+<section>
+  <h2>Discussion</h2>
+  <p>
+    Discuss roadmap items on
+    <a href="https://github.com/orgs/Integrity-Policy-Enforcement/discussions">GitHub Discussions</a>.
+  </p>
+</section>
+
+</div>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <span>
+      IPE is part of the Linux kernel, licensed under
+      <a href="https://www.kernel.org/doc/html/latest/process/license-rules.html">GPL-2.0</a>.
+      Site content <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.
+    </span>
+    <span>
+      <a href="https://lore.kernel.org/linux-security-module/">Mailing list</a> ·
+      <a href="https://github.com/Integrity-Policy-Enforcement">GitHub</a> ·
+      <a href="https://github.com/Integrity-Policy-Enforcement/ipe-logo">Logo</a>
+    </span>
+  </div>
+</footer>
+
+</body>
+</html>

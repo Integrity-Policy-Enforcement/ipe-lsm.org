@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IPE — Integrity Policy Enforcement</title>
+<meta name="description" content="IPE is a Linux Security Module that makes allow/deny decisions based on the integrity properties of files.">
+<link rel="icon" href="favicon.ico">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="/"><img src="images/ipe-logo.svg" alt="">IPE</a>
+    <nav class="site">
+      <a href="/" class="active">Overview</a>
+      <a href="https://docs.kernel.org/admin-guide/LSM/ipe.html">Docs</a>
+      
+      <a href="/use-cases.html">Use Cases</a>
+      <a href="/faq.html">FAQ</a>
+      <a href="/genesis.html">Genesis</a>
+      <a href="/roadmap.html">Roadmap</a>
+      <a href="/talks.html">Talks</a>
+      <a href="/contributing.html">Contributing</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<div class="wrap">
+  <div class="hero">
+    <img src="images/ipe-logo.svg" alt="IPE logo">
+    <h1>Integrity Policy Enforcement</h1>
+    <p class="tagline">
+      IPE is a Linux Security Module that makes allow/deny decisions based on
+      the integrity properties of files — whether a file is backed by dm-verity,
+      protected by fs-verity, or originates from the initramfs.
+    </p>
+  </div>
+</div>
+
+<div class="wrap">
+
+
+
+
+
+<section>
+  <h2>Deployed in production</h2>
+  <p>IPE is used in Microsoft Azure infrastructure:</p>
+  <ul>
+    <li><a href="https://learn.microsoft.com/en-us/azure/aks/use-azure-linux-os-guard">Azure Linux with OS Guard</a> — code integrity enforcement on AKS node images</li>
+    <li><a href="https://learn.microsoft.com/en-us/azure/azure-boost/overview">Azure Boost</a> — locked-down host stack for offloaded hypervisor workloads</li>
+  </ul>
+  <p><a href="/use-cases.html">More use cases →</a></p>
+</section>
+
+
+
+<section>
+  <h2>Start here</h2>
+  <div class="cards">
+    <a href="https://docs.kernel.org/admin-guide/LSM/ipe.html">
+      <span class="t">Documentation ↗</span>
+      <span class="d">Getting started, policy syntax, securityfs interface, audit records</span>
+    </a>
+    <a href="/faq.html">
+      <span class="t">FAQ</span>
+      <span class="d">Common questions about IPE</span>
+    </a>
+    <a href="/genesis.html">
+      <span class="t">Genesis</span>
+      <span class="d">Why IPE was built and how it reached mainline</span>
+    </a>
+
+
+  </div>
+</section>
+
+</div>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <span>
+      IPE is part of the Linux kernel, licensed under
+      <a href="https://www.kernel.org/doc/html/latest/process/license-rules.html">GPL-2.0</a>.
+      Site content <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.
+    </span>
+    <span>
+      <a href="https://lore.kernel.org/linux-security-module/">Mailing list</a> ·
+      <a href="https://github.com/Integrity-Policy-Enforcement">GitHub</a> ·
+      <a href="https://github.com/Integrity-Policy-Enforcement/ipe-logo">Logo</a>
+    </span>
+  </div>
+</footer>
+
+</body>
+</html>
